@@ -21,5 +21,17 @@ You need dependencies below.
 - pytube
 
 
+### Install repo and requirements
+
+Clone the repo and install 3rd-party libraries.
+
+```bash
+$ git clone https://github.com/AghaKia/YouTube-Downloder.git
+$ cd tf-pose-estimation
+$ pip3 install -r requirements.txt
+
+
+
+
 
 Email: haratiank2@gmail.com
