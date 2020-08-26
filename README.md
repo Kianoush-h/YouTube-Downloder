@@ -40,7 +40,7 @@ $ pip3 install -r requirements.txt
 
 ### Test Inference
 
-You can test the inference feature with a single image.
+You can test the the app with this:
 
 ```
 $ python3 YouTube_Downloader.py
@@ -50,15 +50,15 @@ $ python3 YouTube_Downloader.py
 
 Then you will see the screen as below :
 
-![inferent_result](./etcs/YouTubeDownloader.png)
+![YouTubeDownloader](./etcs/YouTubeDownloader.jpg)
 
 
 
 You need to copy and paste the URL, and in a few seconds, the app downloads the video in your specified folder.
 
 
-![inferent_result](./etcs/demo1.png)
-![inferent_result](./etcs/demo2.png)
+![demo1](./etcs/demo1.jpg)
+![demo2](./etcs/demo2.jpg)
 
 
 
