@@ -44,21 +44,20 @@ You can test the the app with this:
 
 ```
 $ python3 YouTube_Downloader.py
-
 ```
 
 
 Then you will see the screen as below :
 
-![YouTubeDownloader](./etcs/YouTubeDownloader.jpg)
+![YouTubeDownloader](./etcs/YouTubeDownloader.JPG)
 
 
 
 You need to copy and paste the URL, and in a few seconds, the app downloads the video in your specified folder.
 
 
-![demo1](./etcs/demo1.jpg)
-![demo2](./etcs/demo2.jpg)
+![demo1](./etcs/demo1.JPG)
+![demo2](./etcs/demo2.JPG)
 
 
 
