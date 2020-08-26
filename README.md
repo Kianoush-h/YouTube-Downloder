@@ -8,6 +8,8 @@ To get the app, please send me an email; I will provide you with the link to dow
 
 Moreover, please feel free to give us your feedback to share your experience.
 
+Email: haratiank2@gmail.com
+
 
 ## Install
 
@@ -26,12 +28,43 @@ You need dependencies below.
 Clone the repo and install 3rd-party libraries.
 
 ```bash
-$ git clone https://github.com/AghaKia/YouTube-Downloder.git
+$ git clone https://github.com/Kianoush-h/YouTube-Downloder
 $ cd tf-pose-estimation
 $ pip3 install -r requirements.txt
+```
+
+
+
+
+## Demo
+
+### Test Inference
+
+You can test the inference feature with a single image.
+
+```
+$ python3 YouTube_Downloader.py
+
+```
+
+
+Then you will see the screen as below :
+
+![inferent_result](./etcs/YouTubeDownloader.png)
+
+
+
+You need to copy and paste the URL, and in a few seconds, the app downloads the video in your specified folder.
+
+
+![inferent_result](./etcs/demo1.png)
+![inferent_result](./etcs/demo2.png)
 
 
 
 
 
-Email: haratiank2@gmail.com
+
+
+
+
