@@ -29,7 +29,7 @@ Clone the repo and install 3rd-party libraries.
 
 ```bash
 $ git clone https://github.com/Kianoush-h/YouTube-Downloder
-$ cd tf-pose-estimation
+$ cd YouTube-Downloder
 $ pip3 install -r requirements.txt
 ```
 
@@ -60,9 +60,13 @@ You need to copy and paste the URL, and in a few seconds, the app downloads the 
 ![demo2](./etcs/demo2.JPG)
 
 
+## Future
+
+In the next versions, you will be able to download the whole playlist if you want.
+Furthermore, I will add different qualities feature and subtitle download options.
 
 
-
+Moreover, please feel free to give us your feedback to share your experience.
 
 
 
