@@ -161,8 +161,9 @@ Intruc = tk.Label(window, text = Ins_text,
 
 Intruc.place(x = 0, y = 15) 
 
-tk.Label(window, text = "By Kianoush H., Ver 1.1",  
-          fg="gray",font = ("Times New Roman", 10)).place(x = 360, y = 260) 
+tk.Label(window, text = "By Kianoush H., Ver 1.0",  
+          fg="gray",font = ("Times New Roman", 10)).place(x = x0+360,
+                                                          y = y0+260) 
                          
 
                                  
@@ -173,7 +174,8 @@ statusbar.pack(side=tk.BOTTOM, fill=tk.X)
 
 
 Sorting_lable = tk.Label(window, text = "Select The Format :",   
-                        font = ("Times New Roman", 10)).place(x = 5, y = 130) 
+                        font = ("Times New Roman", 10)).place(x = x0+5,
+                                                              y = y0+130) 
 
 
   
@@ -185,14 +187,14 @@ Sorting_choose = ttk.Combobox(window, width = 21, textvariable = n)
 Sorting_choose['values'] = ('MP4',  
                           'MP3')
 
-Sorting_choose.place(x = 130, y = 130) 
+Sorting_choose.place(x = x0+130, y = y0+130) 
 Sorting_choose.current(0) 
 
 
 URL_string_label = tk.Label(window, width = 12,
                    text = 'Video URL :', 
-                   font = ('Times New Roman',10,'normal')).place(x = 0, 
-                                           y = 90) 
+                   font = ('Times New Roman',10,'normal')).place(x = x0+0,
+                                                                 y = y0+90) 
 
 # Inisitalization and insering initial values
 URL_string = tk.StringVar() 
@@ -203,30 +205,32 @@ URL_string.set('Enter your URL here ...')
 # creating a entry for year to 
 URL_string_entry = tk.Entry(window, width =65,
                      textvariable = str(URL_string), 
-                     font = ('Times New Roman',10,'normal')).place(x = 90, 
-                                           y = 93)                   
+                     font = ('Times New Roman',10,'normal')).place(x = x0+90, 
+                                           y = y0+93)                   
                                         
                                                                    
 video_title_ = tk.Label(window, width = 12,
                     text = 'Video Title :', 
-                    font = ('Times New Roman',10,'normal')).place(x = 0, y = 180) 
+                    font = ('Times New Roman',10,'normal')).place(x = x0+0,
+                                                                  y = y0+180) 
 
 video_title_string = tk.StringVar() 
 video_title_string.set('###########################')
 
 video_title = tk.Entry(window, width = 60,state='disabled',
                      textvariable = str(video_title_string), fg="blue",
-                     font = ('Times New Roman',10,'normal')).place(x = 85, y = 180)   
+                     font = ('Times New Roman',10,'normal')).place(x = x0+85,
+                                                                   y = y0+180)   
         
         
 
 sub_btn=tk.Button(window,text = 'Search', command =  submit,width = 20) 
-sub_btn.place(x = 200, y = 230) 
+sub_btn.place(x = x0+200, y = y0+230) 
 
 
 
 can_btn = tk.Button(window, text="Stop", command=stop, width = 20)
-can_btn.place(x = 50, y = 230) 
+can_btn.place(x = x0+50, y = y0+230) 
 
 
 

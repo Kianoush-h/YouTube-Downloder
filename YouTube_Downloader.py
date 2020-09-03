@@ -32,6 +32,9 @@ from pytube import YouTube
 from tkinter import filedialog
 
 
+default_link = 'https://www.youtube.com/watch?v=tu4RHUPK1Mg&t=7s'
+
+
 def stop():
     global flgg
     flgg = 0
@@ -69,7 +72,7 @@ def submit():
      # Send to Function
 
     if "Enter" in URL_string.get():
-        URL_string.set("https://www.youtube.com/watch?v=qyHyFsT7Hig")
+        URL_string.set(default_link)
   
     dt_string = you_tube(statusbar,URL_string.get())
     
@@ -122,7 +125,15 @@ def you_tube(st,link):
         # redo = you_tube(st,link)
  
     #Get the first video type - usually the best quality.
-    video_type = video.streams.filter(progressive = True, file_extension = "mp4").first()
+    
+    try:
+        video_type = video.streams.filter(subtype='mp4', progressive=True, res=Sorting_quality.get())[0]
+        name = video.title + '_' + Sorting_quality.get()
+    except:
+        video_type = video.streams.filter(progressive = True, file_extension = "mp4").first()
+        messagebox.showinfo("Warning", 'The prefered quality is not available')
+        name = video.title
+
  
     #Gets the title of the video
     title = video.title
@@ -133,10 +144,38 @@ def you_tube(st,link):
     
     file_size = video_type.filesize
     #Starts the download process
-    video_type.download(path)
+    video_type.download(output_path= path, filename=name)
     return "0"
  
  
+
+
+
+def description():
+    
+    if "Enter" in URL_string.get():
+        URL_string.set(default_link)
+        
+    status(statusbar,"Accessing YouTube URL ... Description")
+    time.sleep(1)
+    
+    try:
+        video = YouTube(URL_string.get())
+    except:
+        status(statusbar,"ERROR ... Check your connection")        
+        time.sleep(1)
+        return '1'
+        
+        
+    title = video.title
+    video_title_string.set(title)
+    
+    des = video.description
+    des = des.encode('utf-8')
+    
+    messagebox.showinfo("Video Description", des)
+    
+
 
 
 
@@ -162,7 +201,8 @@ Intruc = tk.Label(window, text = Ins_text,
 Intruc.place(x = 0, y = 15) 
 
 tk.Label(window, text = "By Kianoush H., Ver 1.1",  
-          fg="gray",font = ("Times New Roman", 10)).place(x = 360, y = 260) 
+          fg="gray",font = ("Times New Roman", 10)).place(x = x0+360,
+                                                          y = y0+260) 
                          
 
                                  
@@ -172,27 +212,46 @@ statusbar.pack(side=tk.BOTTOM, fill=tk.X)
                                                           
 
 
-Sorting_lable = tk.Label(window, text = "Select The Format :",   
-                        font = ("Times New Roman", 10)).place(x = 5, y = 130) 
+Sorting_lable = tk.Label(window, text = "Select the Format :",   
+                        font = ("Times New Roman", 10)).place(x = x0+5,
+                                                              y = y0+100) 
 
 
   
 # Combobox creation 
 n = tk.StringVar() 
-Sorting_choose = ttk.Combobox(window, width = 21, textvariable = n) 
+Sorting_choose = ttk.Combobox(window, width = 7, textvariable = n) 
   
 # Adding combobox drop down list 
-Sorting_choose['values'] = ('MP4',  
-                          'MP3')
-
-Sorting_choose.place(x = 130, y = 130) 
+Sorting_choose['values'] = ('MP4','MP3')
+Sorting_choose.place(x = x0+130, y = y0+100) 
 Sorting_choose.current(0) 
+
+
+
+
+
+quality_label = tk.Label(window, text = "Select the Quality :",   
+                        font = ("Times New Roman", 10)).place(x = x0+230,
+                                                              y = y0+100) 
+                                                              
+m = tk.StringVar() 
+Sorting_quality = ttk.Combobox(window, width = 7, textvariable = m) 
+  
+# Adding combobox drop down list 
+Sorting_quality['values'] = ('720p', '480p','360p')
+Sorting_quality.place(x = x0+350, y = y0+100) 
+Sorting_quality.current(0) 
+
+
+
+
 
 
 URL_string_label = tk.Label(window, width = 12,
                    text = 'Video URL :', 
-                   font = ('Times New Roman',10,'normal')).place(x = 0, 
-                                           y = 90) 
+                   font = ('Times New Roman',10,'normal')).place(x = x0+0,
+                                                                 y = y0+50) 
 
 # Inisitalization and insering initial values
 URL_string = tk.StringVar() 
@@ -203,30 +262,42 @@ URL_string.set('Enter your URL here ...')
 # creating a entry for year to 
 URL_string_entry = tk.Entry(window, width =65,
                      textvariable = str(URL_string), 
-                     font = ('Times New Roman',10,'normal')).place(x = 90, 
-                                           y = 93)                   
-                                        
+                     font = ('Times New Roman',10,'normal')).place(x = x0+90, 
+                                           y = y0+53)                   
+             
+                                                                   
+                                                                   
+                                                                   
                                                                    
 video_title_ = tk.Label(window, width = 12,
                     text = 'Video Title :', 
-                    font = ('Times New Roman',10,'normal')).place(x = 0, y = 180) 
+                    font = ('Times New Roman',10,'normal')).place(x = x0+0,
+                                                                  y = y0+185) 
 
 video_title_string = tk.StringVar() 
 video_title_string.set('###########################')
 
-video_title = tk.Entry(window, width = 60,state='disabled',
+video_title = tk.Entry(window, width = 40 ,state='disabled',
                      textvariable = str(video_title_string), fg="blue",
-                     font = ('Times New Roman',10,'normal')).place(x = 85, y = 180)   
-        
+                     font = ('Times New Roman',9,'normal')).place(x = x0+85,
+                                                                   y = y0+185)   
+   
+                                                                  
+                                                                  
+                                                                  
+des_btn=tk.Button(window,text = 'Description', command =  description,width = 10) 
+des_btn.place(x = x0+380, y = y0+180) 
+                                                                  
+                                                                  
         
 
 sub_btn=tk.Button(window,text = 'Search', command =  submit,width = 20) 
-sub_btn.place(x = 200, y = 230) 
+sub_btn.place(x = x0+200, y = y0+230) 
 
 
 
 can_btn = tk.Button(window, text="Stop", command=stop, width = 20)
-can_btn.place(x = 50, y = 230) 
+can_btn.place(x = x0+50, y = y0+230) 
 
 
 
