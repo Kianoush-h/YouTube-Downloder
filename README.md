@@ -14,7 +14,7 @@ Moreover, please feel free to give us your feedback to share your experience.
 
 
 
-![YouTubeDownloader](./etc/sample.gif)
+![YouTubeDownloader](./etcs/sample.gif)
 
 
 
