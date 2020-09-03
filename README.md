@@ -13,6 +13,12 @@ To get the app, please send me an email; I will provide you with the link to dow
 Moreover, please feel free to give us your feedback to share your experience.
 
 
+
+![YouTubeDownloader](./etc/sample.gif)
+
+
+
+
 ## Install
 
 ### Dependencies
