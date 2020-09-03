@@ -69,5 +69,12 @@ Furthermore, I will add different qualities feature and subtitle download option
 Moreover, please feel free to give us your feedback to share your experience.
 
 
+# Contact Me
+
+Email: haratiank2@gmail.com
+
+YouTube channel: https://www.youtube.com/channel/UCvf9_53f6n3YjNEA4NxAkJA?view_as=subscriber
+GitHub: https://github.com/Kianoush-h
+LinkedIn: https://www.linkedin.com/in/kianoush-haratiannejadi/
 
 

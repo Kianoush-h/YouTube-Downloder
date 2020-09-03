@@ -1,9 +1,9 @@
 # YouTube Downloder Ver 1.1
-This is the seccond version of the user-friendly YouTube-Downloder that helps you to download any YouTube video. I created this project in python. 
+This is the second version of the user-friendly YouTube-Downloader that helps you to download any YouTube video. I created this project in python. 
 
-To work with this app you need to copy and paste the URL, and in a few seconds, the app downloads the video in your specified folder.
+To work with this app, you need to copy and paste the URL, and in a few seconds, the app downloads the video in your specified folder.
 
-You can choose the subtitle language, quality of the video and format before the app downloads the video. Furthermore, you can see the video description before downloading.
+You can choose the subtitle language, quality of the video, and format before the app downloads the video. Furthermore, you can see the video description before downloading it.
 
 You can use this application instead of that 500mb significant software, and it's also enough user friendly.
 
@@ -12,11 +12,6 @@ To get the app, please send me an email; I will provide you with the link to dow
 
 Moreover, please feel free to give us your feedback to share your experience.
 
-Email: haratiank2@gmail.com
-
-YouTube channel: https://www.youtube.com/channel/UCvf9_53f6n3YjNEA4NxAkJA?view_as=subscriber
-GitHub: https://github.com/Kianoush-h
-LinkedIn: https://www.linkedin.com/in/kianoush-haratiannejadi/
 
 ## Install
 
