@@ -1,0 +1,67 @@
+1
+00:00:00,280 --> 00:00:07,640
+hello everyone this is Kailash we are
+
+2
+00:00:03,290 --> 00:00:13,219
+going to use this Python script to web
+
+3
+00:00:07,640 --> 00:00:17,300
+scrapping here we have new eg website we
+
+4
+00:00:13,219 --> 00:00:19,789
+are going to collect few basic data for
+
+5
+00:00:17,300 --> 00:00:23,180
+a graphic card such as its name the
+
+6
+00:00:19,789 --> 00:00:26,990
+brand the price and also the shipping
+
+7
+00:00:23,180 --> 00:00:30,759
+price some of them are free and some of
+
+8
+00:00:26,990 --> 00:00:36,100
+them yeah here for example this 3 point
+
+9
+00:00:30,759 --> 00:00:49,580
+$99 for shipping ok this is our script
+
+10
+00:00:36,100 --> 00:00:54,410
+I'm going to run it here ok it's done it
+
+11
+00:00:49,580 --> 00:00:59,050
+creates a CSV file and you can see the
+
+12
+00:00:54,410 --> 00:01:05,630
+output here lets me just expand it ok
+
+13
+00:00:59,050 --> 00:01:09,790
+these are product names after that its
+
+14
+00:01:05,630 --> 00:01:13,340
+brand name price and the shipping cost
+
+15
+00:01:09,790 --> 00:01:18,410
+so all of them as I mentioned before is
+
+16
+00:01:13,340 --> 00:01:25,600
+free and sometimes high price for it ok
+
+17
+00:01:18,410 --> 00:01:25,600
+this is a web scraping script in Python
